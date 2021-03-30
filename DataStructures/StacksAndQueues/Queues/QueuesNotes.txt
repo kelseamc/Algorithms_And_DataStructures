@@ -1,0 +1,17 @@
+********* Queues *********
+
+=> First item in is the first item out
+
+How they are used?
+    - Background tasks
+    - Uploading resources
+    - Printing / Task processing
+
+Array Implementation
+ => Can use .push() and .shift() or .unshift() and .pop()  ** shift/unshift will cause the array to be re-idexed = bad time complextiy **
+
+
+If concerned about performance it is best to implement your own queue class!
+
+Linked List Implementation
+=> create node and queue classes

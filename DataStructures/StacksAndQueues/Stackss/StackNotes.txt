@@ -1,0 +1,33 @@
+**********  Stacks  ***********
+
+=> The last element added to the stack will be the first element removed from the stack 
+    (think a stack of plates, top plate is last in and first out)
+
+Example: The Call Stack
+
+Where Stacks are used?
+    - Managing fucntion invocations
+    - Undo / Redo 
+    - Routing (the history object) is treated like a stack
+    - Solve algos
+
+
+Array Implementation 
+ => using .pop() and .push() in tandum on an array creates a stack. As long as that is how we are adding and removing. You can't insert and element 
+    in the middle of the array.
+        - .push() adds to end of array (last thing in)
+        - .pop()  removes at end of array (first thing out)
+
+ => using .unshift() and .shift() in tandom on an array also creates a stack. 
+        - .unshift() adds to beginning of array (last thing in)
+        - .shift()  removes at beginning of array (first thing out)
+
+        ** This option is not as good when talking about Big O notation because adding/removing something to the beginning causes you to have 
+            to re-index the entire array -- causing a greater Time Complexity ***
+
+Linked List Implementation
+ => need a node class and a list class called Stack
+
+ The Stack class will have two function called .push() and .pop(). These are actually the shift and unshift function of a singly linked list.
+    This is because the pop and push fucntions of a singly linked this have to go through the entire list to remove or add at the end, which 
+    increases the Time Complexity
