@@ -1,0 +1,41 @@
+
+
+*********** Inserting ************
+
+    >> create a new node
+    >> starting at the root
+        > Check if there is a root. If not then new node becomes root
+        > If there is a root, check if the value of new node is greater than or less than root value
+            - If greater than
+                * check if there is a node to the right
+                    ~ if there is move to that node, and repeat these steps
+                    ~ if there is not, add that new node as the right property
+            - If less than
+                * check if there is a node to the left
+                    ~ if there is move to that node, are repeat these steps
+                    ~ if there is not, add that new node as the left property
+    >> return the entire tree 
+    *** If the val inserted = value of a node in tree there are two ways to handle:
+            1. return undefined
+            2. add this.frequency to the node class and increment frequency if node value
+               already exists.
+    ***
+
+
+
+
+************** Finding a Node **************
+
+    >> Starting at the root
+        > Check if there is a root, if not - we are done searching
+        > If there is a root, check if the value of the new node is the value we are looking for 
+        > If not, check to see if the value is greater than or less than the value of the root
+            - If greater than
+                ~ check to see if there is a node to the right 
+                    * if there is, move to that node and repeat steps
+                    * if there isn't, we are done searching
+            - If less than
+                ~ check to see if there is a node to the left
+                    * if there is, move to that node and repeat steps
+                    * if there isn't, we are done searching
+        > return found node or true

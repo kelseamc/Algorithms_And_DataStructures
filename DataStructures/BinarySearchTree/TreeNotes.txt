@@ -1,0 +1,38 @@
+
+******* What are Trees ********
+=> A data structure that consists of nodes in a parent/child relationship
+    - nodes can store any type of data but usually strings or numbers
+
+    Lists = linear
+    Trees = nonlinear (one node can point to multiple nodes)
+
+****** Tree Rules ******
+    1. A node can only point to a child. It cannot point to one of its siblings and a child cannot point to its parent
+    2. Can only have one root node that is the start of the tree
+
+
+******* Terminology ********
+    - Root = the top node of the tree
+    - Child = a node directly connected to another node when moving away from the Root
+    - Parent = the converse notion of a child
+    - Siblings = a group of nodes with the same parent
+    - Leaf = a node with no children
+    - Edge = the connection between two nodes
+
+
+******* Uses of Trees ********
+    > HTML DOM
+    > Network Routing
+    > Abstract Syntax Tree
+    > Atificial Intelligence
+    > Folders in operating systems
+    > Computer file systems
+    > JSON
+
+
+******* Binary Search Trees ********
+    > each node at most can have 2 children
+    > every node to the left of a parent node is always less than the parent
+    > every node to the right of the parent node is alway greater than the parent
+
+  
