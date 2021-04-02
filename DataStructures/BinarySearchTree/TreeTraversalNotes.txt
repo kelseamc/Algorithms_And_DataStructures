@@ -1,0 +1,81 @@
+
+**  Tree Traversal  **
+
+~ visit every node once
+~ can be any tree not just a Binary Search Tree, meaning every node could have 100 children
+
+// Two Approaches : these approaches involve the same steps, but differ in the order of the steps. The different order gives a different result
+
+    => Breadth-first Search 
+        - we want to visit every node on the same level. In other words we want to look at every sibling node before we look at a child
+        * Steps (Iteratively) *
+            1. Create a Queue (this can be an array) and a variable to store the value of nodes visited
+            2. Place the root node in the Queue
+            3. Loop as long as there is anything in the queue
+                - Dequeue a node from the queue and push the value of the node into a variable that stores the nodes
+                - If there is a left property on the node dequeued, add it to the queue 
+                - If there is a right property on the node dequeued, add it to the queue 
+            4. Return the variable that stores all our values
+
+    => Depth-first Search 
+        - Pre-Order - traverse the left side of the node then the right
+            * Steps (Recursively) *
+                1. Create a variable to store the nodes visited 
+                2. Create a variable to store the starting node of the tree (current)
+                        - if starting with root you don't technically need to set it to a vaiable
+                        - but if you wanted to start traversing at a different node, setting a variable makes that easier
+                3. Write a helper function that accepts a node 
+                    - Push the value of the node to the variable that stores the values
+                    - If the node has a left property, call the helper function with the left property on the node
+                    - If the node has a right property, call the helper function with ther right property on the node
+                4. Invoke the helper function with the current variable
+                5. Return the variable that stores all our values
+
+
+        - Post Order - explore all children before we actually visit the node
+             * Steps (Recursively) *
+                1. Create a variable to store the nodes visited 
+                2. Create a variable to store the starting node of the tree (current)
+                3. Write a helper function that accepts a node 
+                    - If the node has a left property, call the helper function with the left property on the node
+                    - If the node has a right property, call the helper function with ther right property on the node
+                    - Push the value of the node to the variable that stores the values
+                4. Invoke the helper function with the current variable
+                5. Return the variable that stores all our values
+
+
+        - In Order - traverse the entire left side, then the right 
+            * Steps (Recursively) *
+                1. Create a variable to store the nodes visited 
+                2. Create a variable to store the starting node of the tree (current)
+                3. Write a helper function that accepts a node 
+                    - If the node has a left property, call the helper function with the left property on the node
+                    - Push the value of the node to the variable that stores the values
+                    - If the node has a right property, call the helper function with ther right property on the node
+                4. Invoke the helper function with the current variable
+                5. Return the variable that stores all our values
+
+
+
+// When to use BFS and DFS ? // 
+    - can depend on the tree
+    
+    * BFS - best for trees that are deeper than they are wider(space complexity)
+
+        ~ if you have a tree that is wider than deep, because you are loading the queue with "to be visited" nodes across 
+          the tree (siblings), you are storing a lot of datain memeory = bad space complexity
+        ~ Time complexity is the same because you are visiting one node at a time
+
+    * DFS - best for trees that are wider than they are deeper(space complexity)
+
+        ~ if you have a tree that is wider than deep, you are looking at the nodes down the branch instead of accross the tree, 
+          so fewer nodes to keep track of = better space complexity
+        ~ Time complexity is the same because you are visiting one node at a time
+        
+
+    ** DFS In Order => commonly used with Binary Search Trees (get all nodes in their underlying order = lowest to highest values)
+
+    ** DFS Pre-Order => Can be used to "export" a tree structure so that it is easily reconstructed or copied
+                        (clone or flatten it out and store it in a file or database and later reconstruct it back to a tree)
+
+    
