@@ -57,18 +57,18 @@
 
 
 
-// When to use BFS and DFS ? // 
+// When to use BFS and DFS? // 
     - can depend on the tree
     
     * BFS - best for trees that are deeper than they are wider(space complexity)
 
-        ~ if you have a tree that is wider than deep, because you are loading the queue with "to be visited" nodes across 
-          the tree (siblings), you are storing a lot of datain memeory = bad space complexity
+        ~ if you have a tree that is more wide than deep, because you are loading the queue with "to be visited" nodes across 
+          the tree (siblings), you are storing a lot in memeory = bad space complexity
         ~ Time complexity is the same because you are visiting one node at a time
 
     * DFS - best for trees that are wider than they are deeper(space complexity)
 
-        ~ if you have a tree that is wider than deep, you are looking at the nodes down the branch instead of accross the tree, 
+        ~ if you have a tree that is more wide than deep, you are looking at the nodes down the branch instead of accross the tree, 
           so fewer nodes to keep track of = better space complexity
         ~ Time complexity is the same because you are visiting one node at a time
         

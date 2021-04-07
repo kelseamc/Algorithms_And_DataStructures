@@ -1,0 +1,41 @@
+
+*** Binary Heaps ***
+
+=> a category of Trees
+    >> EVERYTHING THAT APPLIES TO TREES, APPLIES TO HEAPS 
+
+// What is a Binary Heap //
+    ~ very similar to a binary search tree, but with some different rules. 
+    ~ in a MaxBinaryHeap, parent nodes are always larger than child nodes.
+    ~ in a MinBinaryHeap, parent nodes are always smaller than child nodes.
+    ~ there is no left, right order
+
+
+// MaxBinaryHeap //
+    - Each parent has at most two child nodes
+    - The value of of each parent node is greater than its child nodes 
+    - In a max Binary Heap the parent is greater than the children, but there are no guarantees between sibliing nodes 
+    - A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
+
+// MinBinaryHeap //
+    - Same as MaxBinaryHeap, except the value of parent node is less than value of child nodes
+
+* Binary heaps are used to implement Priority Queues, which are very commonly used data structures!
+* They are often used with graph traversal algorithims also 
+
+// Storing Binary Heaps //
+    ~ Arrays
+        >> to find children 
+            - for any parent index of an array, n 
+            - the left child is stored at 2n + 1
+            - the right child is stored at 2n + 2
+        >> to find parent
+            - for any child index of an array, n
+            - its parent is at index Math.floored(n-1)/2 *can't have decimal index so round down
+
+// What is a Priority Queue //
+=> a data structure where each element has a priority. Elemenets with higher priority are served before elements with lower priority 
+    // Write a MinBinaryHeap - lower number means higher priority
+    // Each node has a value and priority. Use the priority to build the heap
+    // Enqueue method accepts a value and priority, makes a new node, and puts it on the right spot based off its priority 
+    // Dequeue method removes root element, returns it and rearranges heap using priority
