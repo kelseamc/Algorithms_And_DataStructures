@@ -1,0 +1,32 @@
+
+**** Hash Tables ****
+
+// What is a Hash Table //
+
+    => Hash tables are used to store key value pairs. They are like arrays but the keys are not ordered. Unlike arrays, hash tables 
+       are FAST for all the following operations: 
+            1. Finding values
+            2. Adding new values
+            3. Removing values
+
+// Hash Table Implementation //
+
+    => In order to look up values by key, we need a way to convert keys into valid array with indicies
+    => A function that preforms this task is called a hash function 
+
+// What Makes A Good Hash? //
+    1. Fast 
+    2. Doesn't cluster outputs at specific indicies, but distributes uniformly
+    3. Same input yeilds the same output 
+
+// Dealing with Collisions //
+    ~ Even with a large array and great hash function, collisions are inevitable 
+    ~ There are many strategies for dealing with collisions, but we'll focus on two:
+
+        1. Seperate Chaining
+            => At each index of in our array, we store values using a more sophisticated data structure (e.g. an array or linked list)
+                * this allows us to store multiple key value pairs at the same position
+
+        2. Linear Probing
+            => When we find a collision, we search through the array to find the next empty slot
+                * this allows us to store a single key value pair at each index 
