@@ -1,0 +1,6 @@
+********** Graphs **********
+
+// What are graphs? //
+
+=> a graph data stucture consists of finite (and possibly mutable) set of vertices or nodes or points together with a set of unordered pairs of vertices
+   for an undirected graph of set of ordered pairs for a directed graph 
